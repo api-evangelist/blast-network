@@ -1,0 +1,117 @@
+openapi: 3.1.0
+info:
+  title: Blast Network JSON-RPC
+  description: |
+    Public Ethereum-compatible JSON-RPC endpoint for the Blast Layer 2
+    network (OP Stack derived). Mainnet is chain ID 81457 at
+    https://rpc.blast.io; Sepolia testnet is chain ID 168587773 at
+    https://sepolia.blast.io. This OpenAPI describes the JSON-RPC
+    transport: all calls are HTTP POSTs to `/` with a JSON-RPC 2.0
+    envelope and a method-specific `params` array.
+  version: "1.0"
+  contact:
+    name: Blast
+    url: https://docs.blast.io
+servers:
+  - url: https://rpc.blast.io
+    description: Blast Mainnet (chain ID 81457)
+  - url: https://sepolia.blast.io
+    description: Blast Sepolia Testnet (chain ID 168587773)
+tags:
+  - name: JSON-RPC
+    description: Ethereum-compatible JSON-RPC methods exposed by the Blast node.
+paths:
+  /:
+    post:
+      tags: [JSON-RPC]
+      summary: Invoke a JSON-RPC method
+      description: |
+        Send any Ethereum-compatible JSON-RPC method (eth_, net_, web3_,
+        debug_, trace_ where supported). Use the `method` field to
+        select the call. Common methods include `eth_chainId`,
+        `eth_blockNumber`, `eth_getBalance`, `eth_call`,
+        `eth_estimateGas`, `eth_gasPrice`, `eth_getTransactionByHash`,
+        `eth_getTransactionReceipt`, `eth_sendRawTransaction`,
+        `eth_getLogs`, `eth_getBlockByNumber`, `eth_getBlockByHash`,
+        `net_version`, `web3_clientVersion`.
+      operationId: jsonRpc
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JsonRpcRequest'
+            examples:
+              chainId:
+                summary: Get chain ID
+                value:
+                  jsonrpc: "2.0"
+                  id: 1
+                  method: eth_chainId
+                  params: []
+              blockNumber:
+                summary: Latest block number
+                value:
+                  jsonrpc: "2.0"
+                  id: 1
+                  method: eth_blockNumber
+                  params: []
+              getBalance:
+                summary: Address balance at latest block
+                value:
+                  jsonrpc: "2.0"
+                  id: 1
+                  method: eth_getBalance
+                  params:
+                    - "0x0000000000000000000000000000000000000000"
+                    - "latest"
+      responses:
+        '200':
+          description: JSON-RPC response (either result or error).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JsonRpcResponse'
+components:
+  schemas:
+    JsonRpcRequest:
+      type: object
+      required: [jsonrpc, method, id]
+      properties:
+        jsonrpc:
+          type: string
+          const: "2.0"
+        id:
+          oneOf:
+            - type: integer
+            - type: string
+        method:
+          type: string
+          example: eth_blockNumber
+        params:
+          type: array
+          items: {}
+          default: []
+    JsonRpcResponse:
+      type: object
+      required: [jsonrpc, id]
+      properties:
+        jsonrpc:
+          type: string
+          const: "2.0"
+        id:
+          oneOf:
+            - type: integer
+            - type: string
+            - type: "null"
+        result:
+          description: Method-specific result (present on success).
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+            data:
+              description: Optional error data.
