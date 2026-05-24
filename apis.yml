@@ -172,6 +172,8 @@ common:
     url: https://blast.io/privacy
   - type: TermsOfService
     url: https://blast.io/terms
+  - type: LLMsTxt
+    url: https://docs.blast.io/llms.txt
 integrations:
   - name: Ethereum
   - name: OP Stack
