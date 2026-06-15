@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "2e166850-83a2-47b2-8946-d1e75e382e78",
+      "name": "JSON-RPC",
+      "description": {
+        "content": "Ethereum-compatible JSON-RPC methods exposed by the Blast node.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "441d0b5a-38a8-4bc6-aa55-53a2d18b91b5",
+          "name": "Invoke a JSON-RPC method",
+          "request": {
+            "name": "Invoke a JSON-RPC method",
+            "description": {
+              "content": "Send any Ethereum-compatible JSON-RPC method (eth_, net_, web3_,\ndebug_, trace_ where supported). Use the `method` field to\nselect the call. Common methods include `eth_chainId`,\n`eth_blockNumber`, `eth_getBalance`, `eth_call`,\n`eth_estimateGas`, `eth_gasPrice`, `eth_getTransactionByHash`,\n`eth_getTransactionReceipt`, `eth_sendRawTransaction`,\n`eth_getLogs`, `eth_getBlockByNumber`, `eth_getBlockByHash`,\n`net_version`, `web3_clientVersion`.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"<string>\",\n  \"method\": \"<string>\",\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7cd1fe20-0993-4329-8660-eca4c9163bcf",
+              "name": "JSON-RPC response (either result or error).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"eth_chainId\",\n  \"params\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jsonrpc\": \"string\",\n  \"id\": 7602,\n  \"result\": {},\n  \"error\": {\n    \"code\": 3402,\n    \"message\": \"string\",\n    \"data\": {}\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://rpc.blast.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c90b13b0-5689-4ade-a57b-646b8fb71c94",
+    "name": "Blast Network JSON-RPC",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public Ethereum-compatible JSON-RPC endpoint for the Blast Layer 2\nnetwork (OP Stack derived). Mainnet is chain ID 81457 at\nhttps://rpc.blast.io; Sepolia testnet is chain ID 168587773 at\nhttps://sepolia.blast.io. This OpenAPI describes the JSON-RPC\ntransport: all calls are HTTP POSTs to `/` with a JSON-RPC 2.0\nenvelope and a method-specific `params` array.\n\n\nContact Support:\n Name: Blast",
+      "type": "text/plain"
+    }
+  }
+}
