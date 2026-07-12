@@ -144,6 +144,10 @@ apis:
       - type: Documentation
         url: https://sepolia.blastscan.io
 common:
+  - type: VulnerabilityDisclosure
+    url: security/blast-network-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/blast-network-domain-security.yml
   - type: Website
     url: https://blast.io
   - type: Documentation
