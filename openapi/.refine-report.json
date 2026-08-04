@@ -1,0 +1,14 @@
+{
+  "provider": "blast-network",
+  "sources": [
+    "blast-network-json-rpc-api-openapi.yml"
+  ],
+  "outputs": [
+    "blast-network-json-rpc-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
