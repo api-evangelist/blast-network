@@ -11,6 +11,18 @@ description: >-
   rpc.blast.io and a Sepolia testnet at chain ID 168587773 / sepolia.blast.io.
   Developer surfaces include Blastscan and Sepolia Blastscan explorers, the
   native bridge, USDB stablecoin, and the gas / yield smart contracts.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
