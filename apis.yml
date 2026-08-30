@@ -114,7 +114,7 @@ apis:
   baseURL: https://docs.blast.io/building/guides/usdb-yield
   tags:
   - USDB
-  - Stablecoins
+  - Stablecoin
   - Yield
   tags_raw:
   - USDB
