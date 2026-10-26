@@ -1,0 +1,262 @@
+# Blast (blast-network)
+
+<!-- API-EVANGELIST-PROVENANCE:BEGIN -->
+> ### About this repository
+>
+> **This is not our API.** This repository is an independent, third-party profile of a company's
+> **publicly available** API surface, maintained by [API Evangelist](https://apievangelist.com).
+> API Evangelist does not operate, host, resell, or support this company's APIs, and is not
+> affiliated with or endorsed by the company unless stated on the profile.
+>
+> **Where the information came from.** Everything here is assembled from material a member of the
+> public can reach with a browser and no credentials — the company's own website, developer portal
+> and documentation, the specifications it publishes for public use (OpenAPI, AsyncAPI, JSON Schema,
+> `apis.json`, `llms.txt` and similar), its public repositories, and its public status, pricing and
+> changelog pages. **Nothing here is obtained by breaching a system, defeating an access control, or
+> using credentials of any kind.**
+>
+> **The rating is an independent assessment.** The Kin Score and Agent Readiness rating are
+> independently calculated scores of a company's *public* API artifacts, produced by API Evangelist
+> against a published rubric. They are not certifications, endorsements, security assessments, or
+> audits, and they score published artifacts — not the quality, safety, or security of the software.
+>
+> **Corrections, re-scores, and removal are free.** No partnership, contract, or purchase is
+> required, and you do not need to justify the request.
+>
+> - **Something wrong?** Open an issue on this repository, or email
+>   [info@apievangelist.com](mailto:info@apievangelist.com).
+> - **Published something new?** Ask for a re-score and we will re-run the rating.
+> - **Want the listing taken down?** Say so and we will honor it. The profile is reduced to your
+>   company name, a factual description, and a link to your own site, and the company is recorded as
+>   **unrated** — never scored zero for having asked.
+>
+> **Response times.** Acknowledgement within **one business day**; removal or restriction within
+> **two business days**; corrections and re-scores within **five business days**.
+>
+> **Not from the company, and here with a question?** You are welcome here — we would rather be the
+> front line and point you the right way than have a good report go nowhere. What this repository
+> can answer is narrow, though, so it is worth knowing who you are actually looking for:
+>
+> - **A question about how the API works, an account, billing, or a bug in the service** — that is
+>   the company's own support, not us. We profile this API; we do not operate it and cannot see
+>   your account.
+> - **A bug in an open-source project we only catalog** — file it on that project's own repository.
+>   This has happened with a real and correct bug report that reached us instead of the people who
+>   could fix it, which helped nobody.
+> - **Anything about this listing itself** — the description, the tags, the rating, a missing or
+>   wrong artifact — is ours. Open an issue here.
+> - **Not sure, or something general about API Evangelist or APIs.io** — open an issue on the
+>   [APIs.io Inbox](https://github.com/api-search/inbox) and we will route it.
+>
+> **This repository contains no software, and we will never ask you to download anything.** There is
+> no build, release, installer, or binary here — only text and machine-readable API descriptions, so
+> there is nothing here that can be "corrupt" or need "repairing". Any issue, comment, or email
+> claiming otherwise and offering a download link is not from us and is hostile. Do not follow the
+> link; it is a lure. Report it to GitHub and, if you like, tell us at
+> [info@apievangelist.com](mailto:info@apievangelist.com) so we can take it down.
+>
+> **On a security or compliance team?** Email
+> [info@apievangelist.com](mailto:info@apievangelist.com) with *security* in the subject line and
+> you will get a person, not a form. We will tell you exactly which public URLs this profile was
+> built from so your team can see the same surface we did, and we will take the listing down on
+> request while you work through it.
+>
+> Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
+<!-- API-EVANGELIST-PROVENANCE:END -->
+
+Blast is an Ethereum Layer 2 network (OP Stack-derived, post-Pacific Meridian upgrade) that pays native yield on bridged ETH and stablecoins via auto- rebasing tokens — roughly 4% on ETH (from Ethereum staking) and 5% on USDB (from T-Bill protocols) — and programmatically returns a share of net gas revenue to dApps. Mainnet runs at chain ID 81457 with public JSON-RPC at rpc.blast.io and a Sepolia testnet at chain ID 168587773 / sepolia.blast.io. Developer surfaces include Blastscan and Sepolia Blastscan explorers, the native bridge, USDB stablecoin, and the gas / yield smart contracts.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/blast-network/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/blast-network/refs/heads/main/apis.yml)
+
+## Tags
+
+- Blockchain
+- Layer 2
+- Ethereum
+- EVM
+- Native Yield
+- Rebasing
+- OP Stack
+
+## Timestamps
+
+- **Created:** 2026-05-23
+- **Modified:** 2026-05-23
+
+## APIs
+
+### Blast Mainnet JSON-RPC
+
+Public Ethereum-compatible JSON-RPC endpoint for Blast mainnet (chain ID 81457). Supports the standard eth_* method set used by web3 clients, wallets, and indexers.
+
+- **Human URL:** [https://docs.blast.io/building/network-information](https://docs.blast.io/building/network-information)
+- **Base URL:** `https://rpc.blast.io`
+
+#### Tags
+
+- JSON-RPC
+- Mainnet
+- EVM
+
+#### Properties
+
+- [Documentation](https://docs.blast.io/building/network-information)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Blast Sepolia Testnet JSON-RPC
+
+Public JSON-RPC endpoint for the Blast Sepolia testnet (chain ID 168587773), used for application development, integration testing, and bridge testing before deploying to mainnet.
+
+- **Human URL:** [https://docs.blast.io/building/network-information](https://docs.blast.io/building/network-information)
+- **Base URL:** `https://sepolia.blast.io`
+
+#### Tags
+
+- JSON-RPC
+- Testnet
+- Sepolia
+
+#### Properties
+
+- [Documentation](https://docs.blast.io/building/network-information)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Blast Native Yield Contracts
+
+Auto-rebasing yield mechanism for ETH and USDB on Blast. Contracts expose configuration calls to opt accounts into automatic, claimable, or void yield modes, used by every dApp that handles user balances.
+
+- **Human URL:** [https://docs.blast.io/building/guides/eth-yield](https://docs.blast.io/building/guides/eth-yield)
+- **Base URL:** `https://docs.blast.io/building/guides/eth-yield`
+
+#### Tags
+
+- Yield
+- Rebasing
+- ETH
+- USDB
+
+#### Properties
+
+- [Documentation](https://docs.blast.io/building/guides/eth-yield)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Blast Gas Revenue API
+
+Programmatic interface for dApps to claim back a share of the net gas revenue generated by their contracts on Blast, configured per-contract via the Blast precompile.
+
+- **Human URL:** [https://docs.blast.io/building/guides/gas-fees](https://docs.blast.io/building/guides/gas-fees)
+- **Base URL:** `https://docs.blast.io/building/guides/gas-fees`
+
+#### Tags
+
+- Gas
+- Revenue Sharing
+- Smart Contracts
+
+#### Properties
+
+- [Documentation](https://docs.blast.io/building/guides/gas-fees)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### USDB Native Stablecoin
+
+USDB is Blast's native auto-rebasing stablecoin, redeemable 1:1 for DAI when bridged back to Ethereum. Backed by T-Bill protocols and integrated directly into the Blast bridge.
+
+- **Human URL:** [https://docs.blast.io/building/guides/usdb-yield](https://docs.blast.io/building/guides/usdb-yield)
+- **Base URL:** `https://docs.blast.io/building/guides/usdb-yield`
+
+#### Tags
+
+- USDB
+- Stablecoin
+- Yield
+
+#### Properties
+
+- [Documentation](https://docs.blast.io/building/guides/usdb-yield)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Blast Bridge
+
+Canonical Ethereum-Blast bridge for ETH, USDB, and supported ERC-20 tokens. UI lives at bridge.blast.io and is backed by the OP Stack standard bridge contracts.
+
+- **Human URL:** [https://docs.blast.io/building/bridges](https://docs.blast.io/building/bridges)
+- **Base URL:** `https://bridge.blast.io`
+
+#### Tags
+
+- Bridge
+- Ethereum
+- L1
+
+#### Properties
+
+- [Documentation](https://docs.blast.io/building/bridges)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Blastscan Block Explorer
+
+Etherscan-style block explorer for Blast mainnet — transactions, blocks, addresses, contracts, tokens, and Solidity source verification.
+
+- **Human URL:** [https://blastscan.io](https://blastscan.io)
+- **Base URL:** `https://blastscan.io`
+
+#### Tags
+
+- Explorer
+- Blastscan
+- Mainnet
+
+#### Properties
+
+- [Documentation](https://blastscan.io)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Blastscan Sepolia Testnet Explorer
+
+Blastscan instance for the Blast Sepolia testnet, supporting transaction lookup and contract verification for testnet deployments.
+
+- **Human URL:** [https://sepolia.blastscan.io](https://sepolia.blastscan.io)
+- **Base URL:** `https://sepolia.blastscan.io`
+
+#### Tags
+
+- Explorer
+- Sepolia
+- Testnet
+
+#### Properties
+
+- [Documentation](https://sepolia.blastscan.io)
+- [Postman Collection](collections/blast-network.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/blast-network.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+## Common Properties
+
+- [Website](https://blast.io)
+- [Documentation](https://docs.blast.io)
+- [Getting Started](https://docs.blast.io/building/network-information)
+- [API Reference](https://docs.blast.io/building/network-information)
+- [Bridge](https://bridge.blast.io)
+- [Explorer](https://blastscan.io)
+- [Testnet Explorer](https://sepolia.blastscan.io)
+- [Blog](https://blog.blast.io)
+- [Git Hub](https://github.com/blast-io)
+- [Twitter](https://x.com/Blast_L2)
+- [Discord](https://discord.gg/blast)
+- [Status](https://status.blast.io)
+- [Privacy Policy](https://blast.io/privacy)
+- [Terms of Service](https://blast.io/terms)
+- [L L Ms Txt](https://docs.blast.io/llms.txt)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
